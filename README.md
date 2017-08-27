@@ -1,7 +1,7 @@
 # laravel-gpx-trip-visualizer
 
 ## Hello!
-##### This is a small Laravel based web application for keeping tracks of your trips! Upload the gpx file and enjoy reviewing your trips in google maps!
+##### This is a small Laravel based web application for keeping tracks of your trips! Upload the gpx file and enjoy reviewing your trips!
 ## Instalation steps
 * `cp .env.exampla .env`
 * Create new database
