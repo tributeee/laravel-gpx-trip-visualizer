@@ -11,4 +11,6 @@
 * `php artisan migrate`
 * `php artisan serve`
 
+##### Also, if you forget your password, you can reset it. Just don't forget to update your mailtrap credentials in `.env` file.
+
 #### Hope you enjoy it! :)
