@@ -11,18 +11,6 @@ use Illuminate\Support\Facades\File;
 class TripsController extends Controller
 {
     /**
-     * @param array $data
-     * @return mixed
-     */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => 'required|max:255',
-            'trip' => 'required|mimes:xml,gpx',
-        ]);
-    }
-
-    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -75,7 +63,19 @@ class TripsController extends Controller
 
         $user->trips()->save($trip);
 
-        return response()->redirectTo('/trips')->with('message', 'Trip successfully created!');
+        return response()->redirectTo('/trips')
+            ->with('message', "Trip {$tripName} successfully created!");
+    }
 
+    /**
+     * @param array $data
+     * @return mixed
+     */
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'name' => 'required|max:255',
+            'trip' => 'required|mimes:xml,gpx',
+        ]);
     }
 }
