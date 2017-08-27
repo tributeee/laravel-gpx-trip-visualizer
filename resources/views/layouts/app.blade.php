@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'GPX Trip Visualizer') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -36,7 +36,8 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li><a href="/trips">Your Trips</a></li>
+                        <li><a href="/trips/create">Create new</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -76,5 +77,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCCIFTmmCO_qJQXUtd9zr98hiiVN2aXIBI"></script>
+    <script src="{{ asset('js/loadgpx.js') }}"></script>
+
+    @yield('js')
 </body>
 </html>

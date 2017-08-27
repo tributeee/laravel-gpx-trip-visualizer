@@ -16,5 +16,7 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'HomeController@index')->name('home');
-    Route::resource('trips', 'TripsController');
+    Route::resource('trips', 'TripsController', ['only' => [
+        'index', 'create', 'store'
+    ]]);
 });

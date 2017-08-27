@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <h2>Welcome to GPX Trips Visualizer</h2>
+                    <p>You can now view all your trips <a href="/trips">here</a>, or create a new one <a href="/trips/create">here</a>.</p>
                 </div>
             </div>
         </div>
